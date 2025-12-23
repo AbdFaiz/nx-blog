@@ -1,5 +1,7 @@
 import { navItems } from "@/lib/constants"
 import Link from "next/link"
+import { ThemeToggle } from "./ThemeToggle"
+import { ThemeToggleSwitch } from "./ThemeToggleSwitch"
 
 const Navbar = () => {
   return (
@@ -18,7 +20,8 @@ const Navbar = () => {
                 ))}
 
                 {/* Toggle */}
-                <ThemeToggle
+                <ThemeToggle />
+                {/* <ThemeToggleSwitch /> */}
             </div>
         </div>
       </div>
