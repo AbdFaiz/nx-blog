@@ -4,10 +4,10 @@ import { Card, CardContent, CardHeader } from "./ui/card";
 import { ArrowUpRight, Calendar } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "./ui/badge";
+import Image from "next/image";
 
 const Featured = () => {
   const posts = featuredPosts;
-  //   console.log(posts);
   return (
     <section className="py-20 px-4  s,:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -37,13 +37,14 @@ const Featured = () => {
               transition={{ duration: 0.6, delay: i * 0.1 }}
             >
               <Link href="#">
-                <Card className="group cursor-pointer overflow-hidden hover:shadow-xl transition-all duration-300 border-0 bg-card/50 backdrop-blur-xs md:min-h-130">
-                  <CardHeader>
-                    <div className="relative">
-                      <img
+                <Card className="group cursor-pointer p-0 overflow-hidden hover:shadow-xl transition-all duration-300 bg-card/50 hover:border hover:border-primary backdrop-blur-xs md:min-h-130">
+                  <CardHeader className="p-0">
+                    <div className="relative w-full h-64">
+                      <Image
                         src={post.image}
                         alt={post.title}
-                        className="w-full h-56 object-cover"
+                        fill
+                        className="w-full h-full object-cover"
                       />
 
                       <div className="absolute top-4 left-4">

@@ -33,7 +33,7 @@ const Categories = () => {
               key={category.name}
             >
               <div className="group cursor-pointer">
-                <div className="bg-card rounded-lg p-6 text-center hover:shadow-lg transition-all duration-300 hover:scale-105 border border-border/50">
+                <div className="bg-card rounded-lg p-6 text-center hover:shadow-lg transition-all duration-300 hover:border-primary border border-border/50">
                   <div className="mb-4">
                     <div
                       dangerouslySetInnerHTML={{ __html: category.icon }}
